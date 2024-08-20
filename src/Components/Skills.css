@@ -1,0 +1,194 @@
+.skills-wrapper {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.skills-container {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Initial state for fade-in animation */
+.skills-container h1 {
+    font-size: 3rem;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s forwards;
+}
+
+.skill-show-container, .skill-show-container2 {
+    width: 80vw;
+    margin: 50px auto;
+    display: flex;
+    background-color: white;
+    font-size: 2rem;
+    font-family: 'reem-kufi';
+    margin-top: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
+    width: 200px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    /* opacity: 0;  */
+}
+
+.skill1:hover, .skill2:hover, .skill3:hover, .skill4:hover, .skill5:hover, .skill6:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+/* Increase the size of the icons */
+.skill1 svg, .skill2 svg, .skill3 svg, .skill4 svg, .skill5 svg, .skill6 svg {
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+
+/* Add this class to your existing CSS
+.skill-show-container.animate .skill1,
+.skill-show-container.animate .skill2,
+.skill-show-container.animate .skill3,
+.skill-show-container2.animate .skill4,
+.skill-show-container2.animate .skill5,
+.skill-show-container2.animate .skill6 {
+  animation: none;
+} */
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.skill1.animate {
+  animation: fadeInLeft 1s ease-in;
+}
+
+.skill2.animate {
+  animation: fadeInUp 1s ease-in;
+}
+
+.skill3.animate {
+  animation: fadeInRight 1s ease-in;
+}
+
+.skill4.animate {
+  animation: fadeInLeft 1s ease-in;
+}
+
+.skill5.animate {
+  animation: fadeInUp 1s ease-in;
+}
+
+.skill6.animate {
+  animation: fadeInRight 1s ease-in;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .skill-show-container, .skill-show-container2 {
+        width: 90vw;
+        justify-content: space-between;
+    }
+
+    .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
+        width: 180px;
+        height: 200px;
+        font-size: 1.8rem;
+    }
+
+    .skills-container h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .skill-show-container, .skill-show-container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
+        width: 80%;
+        height: auto;
+        font-size: 1.5rem;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .skills-container h1 {
+        font-size: 2rem;
+    }
+
+    .skill1 svg, .skill2 svg, .skill3 svg, .skill4 svg, .skill5 svg, .skill6 svg {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .skill-show-container, .skill-show-container2 {
+        width: 95vw;
+    }
+
+    .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .skills-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .skill1 svg, .skill2 svg, .skill3 svg, .skill4 svg, .skill5 svg, .skill6 svg {
+        font-size: 3rem;
+    }
+}

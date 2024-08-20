@@ -1,0 +1,147 @@
+.contact-wrapper {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.contact-container {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Initial state for fade-in animation */
+.contact-container h1 {
+    font-size: 3rem;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s forwards;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 80px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 20px;
+    padding-top: 20px; /* Space for the floating label */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: #fff; /* Ensure background color */
+}
+
+/* Floating label style */
+.input-container label {
+    position: absolute;
+    top: 20px; /* Adjust based on the padding of input */
+    left: 20px; /* Same as input padding */
+    font-size: 1rem;
+    color: #6c757d;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    background: #fff; /* Background color to cover input's border */
+    padding: 0 4px; /* Small padding to ensure visibility on input */
+}
+
+/* When input is focused or not empty, move the label */
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -10px; /* Move label above the input */
+    left: 10px; /* Align label */
+    font-size: 0.75rem; /* Smaller font size when label is above */
+    color: black; /* Change color on focus */
+}
+
+
+.input-container input::placeholder {
+    color: #6c757d; 
+}
+
+
+.input-container input:not(:placeholder-shown) + label,
+.input-container input:focus + label {
+    top: -10px; 
+    left: 10px; 
+    font-size: 0.75rem; 
+    color: black; /* Change color on focus */
+}
+
+.button-container button{
+    height:60px;
+    width:25%;
+    font-size: x-large;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    animation: fadeInUp 2.0s ease-out;
+}
+.button-container button:hover{
+    color:black;
+    background-color: white;
+}
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .card {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .input-container input {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .button-container button {
+        font-size: large;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .input-container input {
+        font-size: 0.8rem; /* Adjust font size */
+    }
+
+    .button-container button {
+        width: 100%; /* Full width on mobile */
+        font-size: medium;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .card {
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+
+    .input-container input {
+        font-size: 0.7rem; /* Adjust font size */
+    }
+
+    .button-container button {
+        font-size: small;
+    }
+}
