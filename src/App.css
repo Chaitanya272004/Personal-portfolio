@@ -152,7 +152,9 @@ body {
   color:white;
   background-color: black;
 }
-
+.home-text-container a{
+  text-decoration: none;
+}
 
 @media (max-width: 768px) {
   .home-container {

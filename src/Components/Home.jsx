@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import myCV from '../Assets/ChaitanyaRowthu.pdf'
 
 export const Home = () => {
   return (
@@ -22,7 +23,9 @@ export const Home = () => {
         <div className="home-text-container">
           <h1>Hey, there</h1>
           <h2>I am a Student</h2>
-          <button>Download CV</button>
+          <button>
+            <a href={myCV} download="Chaitanya_CV.pdf">Download CV</a>
+          </button>
           <div className="social-links">
           <a href="https://www.linkedin.com/in/chaitanya-rowthu-6b812528a/" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />

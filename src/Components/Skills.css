@@ -176,11 +176,11 @@
 /* For very small devices */
 @media (max-width: 480px) {
     .skill-show-container, .skill-show-container2 {
-        width: 95vw;
+        width: 70vw;
     }
 
     .skill1, .skill2, .skill3, .skill4, .skill5, .skill6 {
-        width: 100%;
+        width: 80%;
         font-size: 1.2rem;
     }
 
